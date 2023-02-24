@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @font-face {
+      font-family: Hanken Grotesk;
+      src: url(https://fonts.google.com/specimen/Hanken+Grotesk);
+    }
+
+    body {
+      width: 375px;
+      margin: auto;
+      font-family: Hanken Grotesk;
+    }
+
+    .result {
+      width: 100%;
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      border-bottom-left-radius: 10%;
+      border-bottom-right-radius: 10%;
+    }
+
+    .title-result {
+      color: hsl(0, 0%, 86%);
+      text-align: center;
+      font-size: 14px;
+      padding-top: 20px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: hsla(256, 72%, 46%, 1);
+      border-radius: 50%;
+      position: relative;
+      margin: 20px auto;
+    }
+
+    .circle:hover {
+      transform: scale(1.2);
+      box-shadow: 1px 3px 16px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    .stats-result,
+    .number-result {
+      text-align: center;
+    }
+
+    .stats-result {
+      color: hsl(0, 0%, 100%);
+      font-weight: 800;
+      font-size: 40px;
+      padding: 20px auto 10px;
+      position: relative;
+      top: 12px;
+    }
+
+    .number-result {
+      color: hsl(0, 0%, 69%);
+      font-size: 12px;
+      position: relative;
+      bottom: -15px;
+    }
+
+    .result-two {
+      text-align: center;
+      padding: 20px;
+      width: 250px;
+      position: relative;
+      left: 42px;
+      top: 10px;
+    }
+
+    .scored {
+      color: hsl(0, 0%, 69%);
+      font-size: 14px;
+      position: relative;
+      top: -20px;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      color: hsl(0, 0%, 100%);
+      position: relative;
+      bottom: 5px;
+    }
+
+    .summary {
+      font-weight: 500;
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+
+    .sum {
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+
+    .reac,
+    .mem,
+    .verb,
+    .vis {
+      margin-top: 40px;
+    }
+
+    .reac p {
+      display: inline;
+      padding: 10px 10px;
+      position: relative;
+      top: -5px;
+      color: hsl(0, 100%, 67%);
+      font-weight: 500;
+    }
+
+    .mem p {
+      display: inline;
+      padding: 10px 10px;
+      position: relative;
+      top: -5px;
+      color: hsl(39, 100%, 56%);
+      font-weight: 500;
+    }
+
+    .verb p {
+      display: inline;
+      padding: 10px 10px;
+      position: relative;
+      top: -5px;
+      color: hsl(166, 100%, 37%);
+      font-weight: 500;
+    }
+
+    .vis p {
+      display: inline;
+      padding: 10px 10px;
+      position: relative;
+      top: -5px;
+      color: hsl(234, 85%, 45%);
+      font-weight: 500;
+    }
+
+    .grade {
+      margin-left: 106px;
+      color: black !important;
+    }
+
+    .grade-1 {
+      margin-left: 108px;
+      color: black !important;
+    }
+
+    .grade-2 {
+      margin-left: 125px;
+      color: black !important;
+    }
+
+    .grade-3 {
+      margin-left: 125px;
+      color: black !important;
+    }
+
+    button {
+      background-color: hsl(224, 30%, 27%);
+      border: none;
+      width: 300px;
+      margin: 30px auto;
+      padding: 20px 15px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .75px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      ;
+      transition: .2s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="result">
+    <p class="title-result">Your Result</p>
+    <div class="circle">
+      <p class="stats-result">76</p>
+      <p class="number-result">of 100</p>
+    </div>
+
+    <div class="result-two">
+      <p class="scored"><span>Great</span> <br>
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </div>
+  </div>
+  <p class="summary">Summary</p>
+  <div class="sum">
+    <div class="reac">
+      <img src="icon-reaction.svg" alt="reaction-icon">
+      <p>Reaction</p>
+      <p class="grade">80 <span
+          style="color: black; opacity: 0.5; font-size: 16px; position: relative; bottom: 0.8px;">/
+          100</span>
+      </p>
+    </div>
+    <div class="mem">
+      <img src="icon-memory.svg" alt="memory-icon">
+      <p>Memory</p>
+      <p class="grade-1">92 <span
+          style="color: black; opacity: 0.5; font-size: 16px; position: relative; bottom: 0.6px;">/ 100</span></p>
+    </div>
+    <div class="verb">
+      <img src="icon-verbal.svg" alt="verbal-icon">
+      <p>Verbal</p>
+      <p class="grade-2">61 <span
+          style="color: black; opacity: 0.5; font-size: 16px; position: relative; bottom: 0.6px;">/ 100</span></p>
+    </div>
+    <div class="vis">
+      <img src="icon-visual.svg" alt="visual-icon">
+      <p>Visual</p>
+      <p class="grade-3">72 <span
+          style="color: black; opacity: 0.5; font-size: 16px; position: relative; bottom: 0.5px;">/ 100</span></p>
+    </div>
+  </div>
+
+  <button>Continue</button>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linktr.ee/ianisme28" target="_blank">Ianisme28</a>.
+  </div>
+</body>
+
+</html>
